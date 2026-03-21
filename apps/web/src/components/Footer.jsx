@@ -31,9 +31,9 @@ function Footer() {
                 <Phone className="w-5 h-5" />
                 <span>(19) 98873-5696</span>
               </a>
-              <a href="mailto:contato@lightenergysolar.com.br" className="flex items-center gap-3 text-gray-400 hover:text-[#8DBA2F] transition-colors duration-200">
+              <a href="lightenergy@outlook.com.br" className="flex items-center gap-3 text-gray-400 hover:text-[#8DBA2F] transition-colors duration-200">
                 <Mail className="w-5 h-5" />
-                <span>contato@lightenergysolar.com.br</span>
+                <span>lightenergy@outlook.com.br</span>
               </a>
               <div className="flex items-start gap-3 text-gray-400">
                 <MapPin className="w-5 h-5 mt-1 flex-shrink-0" />
