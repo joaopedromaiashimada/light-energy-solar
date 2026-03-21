@@ -1,5 +1,6 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Instagram, <Phone></Phone> } from 'lucide-react';
+import { MapPin, Phone, Mail, Instagram } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 function Footer() {
   const whatsappUrl = 'https://wa.me/message/27DNWQR3MTEZM1';
@@ -28,7 +29,7 @@ function Footer() {
             <h3 className="text-white font-semibold mb-6">Contato</h3>
             <div className="space-y-4">
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-400 hover:text-[#8DBA2F] transition-colors duration-200">
-                <Phone className="w-5 h-5" />
+                <FaWhatsapp className="w-5 h-5 text-white" />
                 <span>(19) 98873-5696</span>
               </a>
               <a href="mailto:lightenergy@outlook.com.br" className="flex items-center gap-3 text-gray-400 hover:text-[#8DBA2F] transition-colors duration-200">
@@ -67,7 +68,7 @@ function Footer() {
                 <Instagram className="w-6 h-6" />
               </a>
               <a href="https://wa.me/message/27DNWQR3MTEZM1" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center text-gray-400 hover:bg-[#8DBA2F] hover:text-white transition-all duration-200" aria-label="WhatsApp">
-                <Phone className="w-6 h-6" />
+                <FaWhatsapp className="w-6 h-6 text-white" />
               </a>
             </div>
           </div>
