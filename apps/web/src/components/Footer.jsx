@@ -37,7 +37,7 @@ function Footer() {
               </a>
               <div className="flex items-start gap-3 text-gray-400">
                 <MapPin className="w-5 h-5 mt-1 flex-shrink-0" />
-                <span>Rua São José,1706 - Centro (Tupi), Piracicaba</span>
+                <span>Rua São José, 1706 - Centro (Tupi), Piracicaba</span>
               </div>
             </div>
           </div>
