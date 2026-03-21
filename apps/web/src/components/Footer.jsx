@@ -31,7 +31,7 @@ function Footer() {
                 <Phone className="w-5 h-5" />
                 <span>(19) 98873-5696</span>
               </a>
-              <a href="lightenergy@outlook.com.br" className="flex items-center gap-3 text-gray-400 hover:text-[#8DBA2F] transition-colors duration-200">
+              <a href="mailto:lightenergy@outlook.com.br" className="flex items-center gap-3 text-gray-400 hover:text-[#8DBA2F] transition-colors duration-200">
                 <Mail className="w-5 h-5" />
                 <span>lightenergy@outlook.com.br</span>
               </a>
