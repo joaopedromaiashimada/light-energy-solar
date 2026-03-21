@@ -90,7 +90,7 @@ function HomePage() {
   }, {
     icon: Lightbulb,
     title: 'Expertise comprovada',
-    description: 'Mais de 500 projetos instalados com índice de satisfação de 98% dos clientes.'
+    description: 'Mais de 750 projetos instalados com índice de satisfação de 98% dos clientes.'
   }];
   const faqs = [{
     question: 'Como funciona a energia solar em dias nublados?',
