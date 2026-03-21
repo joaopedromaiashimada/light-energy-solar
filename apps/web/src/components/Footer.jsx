@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Instagram, MessageCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Instagram, <Phone></Phone> } from 'lucide-react';
 
 function Footer() {
   const whatsappUrl = 'https://wa.me/message/27DNWQR3MTEZM1';
@@ -67,7 +67,7 @@ function Footer() {
                 <Instagram className="w-6 h-6" />
               </a>
               <a href="https://wa.me/message/27DNWQR3MTEZM1" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center text-gray-400 hover:bg-[#8DBA2F] hover:text-white transition-all duration-200" aria-label="WhatsApp">
-                <MessageCircle className="w-6 h-6" />
+                <Phone className="w-6 h-6" />
               </a>
             </div>
           </div>
