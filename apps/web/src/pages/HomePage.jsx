@@ -13,7 +13,7 @@ function HomePage() {
   const benefits = [{
     icon: PiggyBank,
     title: 'Economia na conta de luz',
-    description: 'Reduza até 25% dos custos com energia elétrica e tenha retorno do investimento em poucos anos.'
+    description: 'Reduza até 95% dos custos com energia elétrica e tenha retorno do investimento em poucos anos.'
   }, {
     icon: Leaf,
     title: 'Sustentabilidade',
