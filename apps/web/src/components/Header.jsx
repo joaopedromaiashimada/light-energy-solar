@@ -25,19 +25,39 @@ function Header() {
     { name: 'Contato', href: '#contato' },
   ];
 
-  const scrollToSection = (e, href) => {
+  const goToSection = (href) => {
+    const element = document.querySelector(href);
+
+    if (!element) return;
+
+    setIsMobileMenuOpen(false);
+
+    setTimeout(() => {
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }, 250);
+  };
+
+  const handleDesktopClick = (e, href) => {
     e.preventDefault();
 
     const element = document.querySelector(href);
+    if (!element) return;
 
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
+    const headerOffset = 80;
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPosition = elementPosition - headerOffset;
 
-      setIsMobileMenuOpen(false);
-    }
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth',
+    });
   };
 
   return (
@@ -52,7 +72,7 @@ function Header() {
         <div className="flex items-center justify-between h-20">
           <a
             href="#home"
-            onClick={(e) => scrollToSection(e, '#home')}
+            onClick={(e) => handleDesktopClick(e, '#home')}
             className="flex items-center gap-3 group"
           >
             <img
@@ -76,7 +96,7 @@ function Header() {
               <a
                 key={link.name}
                 href={link.href}
-                onClick={(e) => scrollToSection(e, link.href)}
+                onClick={(e) => handleDesktopClick(e, link.href)}
                 className={`font-medium transition-colors duration-200 hover:text-[#8DBA2F] ${
                   isScrolled ? 'text-gray-700' : 'text-white/90'
                 }`}
@@ -94,12 +114,9 @@ function Header() {
                 : 'text-white hover:bg-white/10'
             }`}
             aria-label="Toggle menu"
+            type="button"
           >
-            {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </div>
@@ -110,19 +127,19 @@ function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.25 }}
             className="lg:hidden bg-white border-t border-gray-200 shadow-xl"
           >
-            <nav className="max-w-7xl mx-auto px-4 py-6 flex flex-col gap-4">
+            <nav className="max-w-7xl mx-auto px-4 py-6 flex flex-col gap-2">
               {navLinks.map((link) => (
-                <a
+                <button
                   key={link.name}
-                  href={link.href}
-                  onClick={(e) => scrollToSection(e, link.href)}
-                  className="text-gray-700 font-medium py-2 hover:text-[#8DBA2F] transition-colors duration-200"
+                  type="button"
+                  onClick={() => goToSection(link.href)}
+                  className="text-left text-gray-700 font-medium py-3 px-1 hover:text-[#8DBA2F] transition-colors duration-200"
                 >
                   {link.name}
-                </a>
+                </button>
               ))}
             </nav>
           </motion.div>
